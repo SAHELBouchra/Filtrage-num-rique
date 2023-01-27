@@ -1,4 +1,6 @@
-# TP5-Filtrage-numérique
+<div align="center">
+  <h1 align="center">TP5 - Filtrage numérique</h1>
+</div>
 
 <a name="retour"></a>
 ## Sommaire :
