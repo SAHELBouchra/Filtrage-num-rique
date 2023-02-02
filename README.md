@@ -86,7 +86,7 @@ ylabel('Amplitude');
 <img width="818" alt="01" src="https://user-images.githubusercontent.com/93081417/215112224-f28afd34-1b22-4408-9005-048e16c978c8.png">
 
 ####  **3- Créer deux filtres permettant de séparer les deux signaux. Tracer la réponse fréquentielle des filtres numériques ainsi définis.**
-####   ** • Commandes : butter, cheby1, freqz**
+####   **• Commandes : butter, cheby1, freqz**
 #### Avec "butter"
 ```matlab
 % Paramètres du filtre passe-bas
@@ -115,7 +115,7 @@ ripple = 0.5; % Ripple en dB
 
 
 ####  **4- Calculer les signaux de sortie des filtres pour le signal d’entrée s(t).**
-####   ** • Commandes : filter**
+####   **• Commandes : filter**
 ##### Le premier filtre
 
 ```matlab
@@ -205,7 +205,7 @@ y2_bruit= x2 + bruit2 ;
 ####  **- Proposer ensuite un filtre numérique.**
 ##### ==> On va utiliser "butter"
 
-####  ** - Tracer la réponse fréquentielle de ce filtre (diagramme de bode).**
+####  **- Tracer la réponse fréquentielle de ce filtre (diagramme de bode).**
 
 ```matlab
 freqz(b, a);
@@ -213,7 +213,7 @@ freqz(b, a);
 
 ![f](https://user-images.githubusercontent.com/121026639/216449178-6c3daa15-a70a-4b77-82a7-e7716864cf33.png)
 
-####  ** - Calculer la sortie du filtre.**
+####  **- Calculer la sortie du filtre.**
 ```matlab
  % Design du filtre
  fcut = 2500; % fréquence de coupure en Hz
@@ -393,8 +393,7 @@ ylabel('Phase (rad)');
 ![bode](https://user-images.githubusercontent.com/121026639/216459902-849f58de-de8a-47fa-811e-ae95c9fadb67.png)
 
 
-####  **5- Calculer la transmittance en Z de ce filtre sur le vecteur fréquences défini précédemment, en faisant appel à la fonction « transfert », et puis tracer son
-module en Db et sa phase. Comparer ce dernier avec celui obtenu dans la question précédente. Conclure.**
+####  **5- Calculer la transmittance en Z de ce filtre sur le vecteur fréquences défini précédemment, en faisant appel à la fonction « transfert », et puis tracer son module en Db et sa phase. Comparer ce dernier avec celui obtenu dans la question précédente. Conclure.**
 ```matlab
 [H,H_f,w] = transfert(B,A,N,te);
 % Tracer le module en dB
