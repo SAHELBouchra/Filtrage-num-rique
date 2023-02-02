@@ -147,5 +147,5 @@ title("le spectre filtré par cheby1");
 ![chepy1](https://user-images.githubusercontent.com/121026639/216443022-52df111e-26db-4178-b72a-671039ad166f.png)
 
 ####  **5- Avec quelles caractéristiques de filtres (fréquence de coupure et ordre) obtient-on de bonnes performances de filtrage ?**
-##### Le choix de fréquence de coupure pour le premier filtre est 110 Hz et d'ordre 5
-##### Et pour le deuxième filtre la fréquence de coupure est 190 Hz et d'ordre 5
+##### ==> Le choix de fréquence de coupure pour le premier filtre est 110 Hz et d'ordre 5
+##### ==> Et pour le deuxième filtre la fréquence de coupure est 190 Hz et d'ordre 5
