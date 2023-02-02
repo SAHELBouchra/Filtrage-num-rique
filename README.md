@@ -411,9 +411,67 @@ ylabel('Phase (rad)');
 ```
 ![z](https://user-images.githubusercontent.com/121026639/216460405-d2d70501-9f33-4ebd-be3e-2daf1695254b.png)
 
+##### ==> Pour conclure, on peut dire que la transmittance en Z est une bonne méthode pour étudier la réponse fréquentielle d'un filtre IIR, et que dans le cas d'un filtre stable, la transmittance en Z est très proche de la transformée de Fourier de la réponse impulsionnelle.
+
 ####  **6- Utiliser la commande firpm pour concevoir un filtre FIR ayant les spécifications suivantes :**
 ####  **•Bande passante : jusqu’à 500Hz.**
 ####  **•Bande atténuante : à partir de 570Hz.**
 ####  **•Fréquence d’échantillonnage : 2000Hz.**
 ####  **•Atténuation minimale dans la bande atténuante : -45dB.**
 ####  **•Atténuation maximale dans la bande passante : -0.2dB.**
+
+```matlab
+Fs = 1e4;
+TS=1/Fs;
+% bande passante et bande attenuante normalisées
+Freq_Pass = 500/Fs;
+Freq_Att =570/Fs;
+Attenuation_Min=0.2;
+% Atténuation minimale
+Attenuation_Max=45;
+
+%Attenuation maximale
+N =100;
+%Nombre choisi de coefficients du filtre
+%Synthese du filtre
+Filter= firpm(N-1, [0 Freq_Pass Freq_Att 1], [1 1 0 0], [Attenuation_Min Attenuation_Max]);
+[H_Fun, ff]=freqz(Filter);
+```
+
+####  **7- Tracer le digramme de Bode de ce filtre.**
+```matlab
+subplot(2,1,1);
+semilogx(ff,20*log10(abs(H_Fun)));
+xlabel('Frequency (Hz)');
+ylabel('Magnitude (dB)');
+grid on
+subplot(2,1,2);
+semilogx(ff,unwrap(angle(H_Fun)));
+xlabel('Frequency (Hz)');
+ylabel('Phase (rad)');
+grid on
+```
+![bode2](https://user-images.githubusercontent.com/121026639/216469345-12d20a5b-4a07-4c39-88e0-15fb9d067d08.png)
+
+####  **- Réaliser la conception d’un filtre FIR permettant de filtrer les deux signaux sonores traités dans la partie 1. Appliquer ce filtre.**
+
+##### Pour le premier signal sonore
+
+```matlab
+Fc = 0.35; % fréquence de coupure en Hz
+[signal1,fe]=audioread('affreux_bruite.wav');
+[signal2,fe2]=audioread('akesuper_bruite.wav');
+akesuper_Filter_Order = 90;
+akesuper_Cutoff_Freq = [0 Fc Fc*2 1];
+akesuper_Cutoff_Gain = [1 1 0 0];
+akesuper_Filter=firpm(akesuper_Filter_Order,akesuper_Cutoff_Freq,akesuper_Cutoff_Gain);
+filtered_signal1 = filter(akesuper_Filter,1,signal1);
+```
+##### Pour le deuxième signal sonore
+```matlab
+affreux_Filter_Order = 90;
+affreux_Cutoff_Freq = [0 Fc Fc*2 1];
+affreux_Cutoff_Gain = [1 1 0 0];
+affreux_Filter=firpm(affreux_Filter_Order,affreux_Cutoff_Freq,affreux_Cutoff_Gain);
+filtered_signal2 = filter(affreux_Filter,1,signal2);
+```
