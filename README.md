@@ -457,9 +457,7 @@ grid on
 ##### Pour le premier signal sonore
 
 ```matlab
-Fc = 0.35; % fréquence de coupure en Hz
 [signal1,fe]=audioread('affreux_bruite.wav');
-[signal2,fe2]=audioread('akesuper_bruite.wav');
 akesuper_Filter_Order = 90;
 akesuper_Cutoff_Freq = [0 Fc Fc*2 1];
 akesuper_Cutoff_Gain = [1 1 0 0];
@@ -468,6 +466,8 @@ filtered_signal1 = filter(akesuper_Filter,1,signal1);
 ```
 ##### Pour le deuxième signal sonore
 ```matlab
+Fc = 0.35; % fréquence de coupure en Hz
+[signal2,fe2]=audioread('akesuper_bruite.wav');
 affreux_Filter_Order = 90;
 affreux_Cutoff_Freq = [0 Fc Fc*2 1];
 affreux_Cutoff_Gain = [1 1 0 0];
