@@ -164,9 +164,10 @@ title("le spectre filtré par cheby1");
 ```matlab
 N1 = length(x);
 N2 = length(x2);
-te = 1/fe;
-t1 = (0:N1-1)*te;
-t2 = (0:N2-1)*te;
+te1 = 1/fe;
+te2 = 1/fe2;
+t1 = (0:N1-1)*te1;
+t2 = (0:N2-1)*te2;
 subplot(2,1,1)
 plot(t1,x)
 title("affreux");
