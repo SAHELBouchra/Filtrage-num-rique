@@ -129,6 +129,8 @@ title("le spectre filtré par butter");
 ```
 ![butter](https://user-images.githubusercontent.com/121026639/216442786-40b99cf7-b00b-4c0f-a308-b4ad513c42eb.png)
 
+##### ==> la fonction "filter" est utilisé  pour filtrer des signaux. Elle prend en entrée un filtre numérique et un signal à filtrer, et retourne la sortie du filtre.
+
 ##### Le deuxième filtre
 ```matlab
 % Appliquer le filtre passe-bas au signal s(t)
