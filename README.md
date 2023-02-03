@@ -335,6 +335,8 @@ else
     fprintf('Le filtre n''est pas stable\n');
 end
 ```
+![impz](https://user-images.githubusercontent.com/121026639/216559785-ff388c19-c21a-4ff3-b199-1e2259a95325.png)
+
 ##### ==> La commande "impz" est utilisée pour tracer la réponse impulsionnelle d'un filtre numérique. La réponse impulsionnelle d'un filtre donne une idée de sa réponse pour un signal d'entrée impulsion de Dirac, il prend en entrée les coefficients du filtre et retourne un graphique de la réponse impulsionnelle
 
 ####  **3- Ecrire une fonction « transfert » qui calculera la fonction de transfert (transmittance en Z du filtre) d'un filtre IIR, et puis qui évalue cette transmittance
