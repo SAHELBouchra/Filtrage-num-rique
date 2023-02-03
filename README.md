@@ -203,7 +203,7 @@ y_bruit = x + bruit1; % superposition du bruit au signal
 y2_bruit= x2 + bruit2 ;
 ```
 ####  **- Proposer ensuite un filtre numérique.**
-##### ==> On va utiliser "butter"
+##### ==> On va utiliser "butter" pour créer un filtre passe-bas.
 
 ####  **- Tracer la réponse fréquentielle de ce filtre (diagramme de bode).**
 
