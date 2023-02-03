@@ -107,7 +107,7 @@ ripple = 0.5; % Ripple en dB %0.5 dB signifie que la perte d'atténuation peut v
 [b, a] = cheby1(ordre, ripple, f_coupure/(fs/2), 'high');
 freqz(b, a);
  ```
- ##### ==> la fonction "cheby1" est utilisée pour générer les coefficients d'un filtre passe-bas ou passe-haut à réponse en cheminement à faible ripple. Cette fonction peut être utilisée pour créer un filtre numérique de premier ordre, qui est un filtre de type IIR (réponse impulsionnelle finie).
+ ##### ==> la fonction "cheby1" est utilisée pour générer les coefficients d'un filtre passe-bas ou passe-haut à réponse en cheminement à faible ripple. Cette fonction peut être utilisée pour créer un filtre numérique de premier ordre, qui est un filtre de type IIR (réponse impulsionnelle infinie).
 ![freqz2](https://user-images.githubusercontent.com/121026639/216442004-c6ab4a14-3ce5-423a-b3c1-7a964c649dee.png)
 
 
