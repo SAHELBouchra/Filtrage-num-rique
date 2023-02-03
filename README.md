@@ -326,8 +326,8 @@ y = filter(A,B, d);
 N=length(d);
 fe=1000;
 te=1/fe;
-% Utiliser la commande impz pour afficher les premières réponses impulsionnelles
-impulsion=impz(A,B,100)
+% Utiliser la commande impz pour afficher la réponse impulsionnelle
+impulsion=impz(B,A);
 
 if abs(impulsion(end)) < 1e-5
     fprintf('Le filtre est stable\n');
