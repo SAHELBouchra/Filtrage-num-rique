@@ -4,8 +4,7 @@
 ## Sommaire :
 1. [ Objectifs. ](#objectif)
 2. [Filtrage de signaux simulés.](#part1)
-3. [ Filtrage de sons. ](#part2)
-4. [ Etude de quelques filtres numériques.](#part3)
+3. [Etude de quelques filtres numériques.](#part2)
 
 <a name="objectif"></a>
 ### **1. Objectifs:**
@@ -15,18 +14,16 @@
 
 #### Commentaires :
 
- Il est à remarquer que ce TP traite en principe des signaux continus. Or, l'utilisation de Matlab suppose l'échantillonnage du signal. Il faudra donc être vigilant par rapport aux différences de traitement entre le temps continu et le temps discret.
+Il est à remarquer que ce TP traite en principe des signaux continus. Or, l'utilisation de Matlab suppose l'échantillonnage du signal. Il faudra donc être vigilant par rapport aux différences de traitement entre le temps continu et le temps discret.
  
 #### Tracé des figures :
- 
-    Toutes les figures devront être tracées avec les axes et les légendes des axes appropriés.
+Toutes les figures devront être tracées avec les axes et les légendes des axes appropriés.
  
 #### Travail demandé :
-
-    un script Matlab commenté contenant le travail réalisé et des commentaires sur ce que vous avez compris et pas compris, ou sur ce qui vous a semblé intéressant ou pas, bref tout commentaire pertinent sur le TP.
+un script Matlab commenté contenant le travail réalisé et des commentaires sur ce que vous avez compris et pas compris, ou sur ce qui vous a semblé intéressant ou pas, bref tout commentaire pertinent sur le TP.
     
-    $~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~$ [ (Revenir au sommaire) ](#retour)
-***
+  $~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~$ [ (Revenir au sommaire) ](#retour)
+
  
    <a name="part1"></a>
 ### **Filtrage de signaux simulés.:**
