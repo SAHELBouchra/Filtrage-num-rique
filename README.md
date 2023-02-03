@@ -35,9 +35,6 @@
 
 ```matlab
 %%
-% Durée du signal (en secondes)
-T = 5;
-
 % Fréquence d'échantillonnage (en Hz)
 fs = 1000;
 
