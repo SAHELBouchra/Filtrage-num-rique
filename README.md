@@ -92,9 +92,9 @@ ordre = 5; % ordre du filtre
 % Création du filtre passe-bas
 [b, a] = butter(ordre, fcut/(fs/2), 'low'); % la fréquence de coupure normalisée pour être comprise entre 0 et 1
 % Tracer la réponse fréquentielle du filtre
- %freqz(b, a);
+freqz(b, a);
  ```
- ##### ==> la fonction "butter" est utilisée pour générer les coefficients d'un filtre passe-bas ou passe-haut. Cette fonction peut être utilisée pour créer un filtre numérique de Butterworth à n poles, qui est un filtre de type IIR (réponse impulsionnelle finie)
+ ##### ==> la fonction "butter" est utilisée pour générer les coefficients d'un filtre passe-bas ou passe-haut. Cette fonction peut être utilisée pour créer un filtre numérique de Butterworth à n poles, qui est un filtre de type IIR (réponse impulsionnelle infinie)
 ![freqz](https://user-images.githubusercontent.com/121026639/216441764-5a5cfd75-eb56-49c4-8fb3-f10f5d7ff4fb.png)
 #### Avec "chepy1"
 ```matlab
@@ -105,7 +105,7 @@ ripple = 0.5; % Ripple en dB
 
 % Création du filtre passe-bas
 [b, a] = cheby1(ordre, ripple, f_coupure/(fs/2), 'high');
- freqz(b, a);
+freqz(b, a);
  ```
  ##### ==> la fonction "cheby1" est utilisée pour générer les coefficients d'un filtre passe-bas ou passe-haut à réponse en cheminement à faible ripple. Cette fonction peut être utilisée pour créer un filtre numérique de premier ordre, qui est un filtre de type IIR (réponse impulsionnelle finie).
 ![freqz2](https://user-images.githubusercontent.com/121026639/216442004-c6ab4a14-3ce5-423a-b3c1-7a964c649dee.png)
