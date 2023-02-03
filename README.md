@@ -101,7 +101,7 @@ freqz(b, a);
 % Paramètres du filtre
 f_coupure = 190; % Fréquence de coupure (en Hz)
 ordre = 5; % Ordre du filtre
-ripple = 0.5; % Ripple en dB
+ripple = 0.5; % Ripple en dB %0.5 dB signifie que la perte d'atténuation peut varier de 0.5 dB dans la région de la fréquence de coupure
 
 % Création du filtre passe-bas
 [b, a] = cheby1(ordre, ripple, f_coupure/(fs/2), 'high');
