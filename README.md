@@ -1,4 +1,3 @@
-# TP5-Filtrage-numérique
 
 <a name="retour"></a>
 ## Sommaire :
